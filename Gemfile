@@ -35,6 +35,8 @@ end
 group :development, :test do
   # loads environment variables from .env into ENV in development and test
   gem 'dotenv-rails'
+  # rspec testing framework
+  gem 'rspec-rails'
 end
 
 # Use ActiveModel has_secure_password
