@@ -15,3 +15,8 @@ Article.create(title: "Gay Marriage", summary: "Gay marriage has been overturned
 Topic.create(name: "Business")
 Topic.create(name: "Health")
 Topic.create(name: "Politics")
+
+# User seeds
+User.create(first_name: "Steven", last_name: "Miller", email: "stevenmiller888@me.com", password: "qwerty", password_confirmation: "qwerty")
+User.create(first_name: "John", last_name: "Smith", email: "johnsmith@gmail.com", password: "john123", password_confirmation: "john123")
+User.create(first_name: "Jane", last_name: "Smith", email: "janesmith@aol.com", password: "janeabc", password_confirmation: "janeabc")
