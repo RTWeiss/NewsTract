@@ -7,7 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Article seeds
-
 Article.create(title: "Afghanistan War Intensifies", summary: "The Afghan War has continued to worsen in recent months")
 Article.create(title: "Russia Invades Ukraine", summary: "Russia has continued to make advances into Ukraine, in violation of international law")
 Article.create(title: "Gay Marriage", summary: "Gay marriage has been overturned in Michigan")
+
+# Topic seeds
+Topic.create(name: "Business")
+Topic.create(name: "Health")
+Topic.create(name: "Politics")
