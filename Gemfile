@@ -33,7 +33,7 @@ group :doc do
 end
 
 group :development, :test do
-  # loads environment variables from .env into ENV in development
+  # loads environment variables from .env into ENV in development and test
   gem 'dotenv-rails'
 end
 
