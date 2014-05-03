@@ -37,4 +37,6 @@ group :development, :test do
   gem 'dotenv-rails'
   # rspec testing framework
   gem 'rspec-rails'
+  # automate generation of entity relationship diagram, use rake erd command
+  gem 'rails-erd'
 end
