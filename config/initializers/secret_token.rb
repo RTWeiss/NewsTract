@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-NewsTract::Application.config.secret_key_base = 'd4a11ffa1870f9ee569741db0fa96762996eca25a5394b7430dfd9fbdae326a4c6db5a7816c10d6228cdfc0bf52d6a36a819c5b8de9744ed1d24bc6a59d0b7b6'
+NewsTract::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
