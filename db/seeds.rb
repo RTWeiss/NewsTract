@@ -20,3 +20,8 @@ Topic.create(name: "Politics")
 User.create(first_name: "Steven", last_name: "Miller", email: "stevenmiller888@me.com", password: "qwerty", password_confirmation: "qwerty")
 User.create(first_name: "John", last_name: "Smith", email: "johnsmith@gmail.com", password: "john123", password_confirmation: "john123")
 User.create(first_name: "Jane", last_name: "Smith", email: "janesmith@aol.com", password: "janeabc", password_confirmation: "janeabc")
+
+# Subscription seeds
+Subscription.create(user_id: 1, topic_id: 2)
+Subscription.create(user_id: 2, topic_id: 2)
+Subscription.create(user_id: 3, topic_id: 1)
