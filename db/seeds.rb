@@ -12,9 +12,14 @@ Article.create(title: "Russia Invades Ukraine", summary: "Russia has continued t
 Article.create(title: "Gay Marriage", summary: "Gay marriage has been overturned in Michigan")
 
 # Topic seeds
+Topic.create(name: "World")
+Topic.create(name: "U.S.")
 Topic.create(name: "Business")
+Topic.create(name: "Technology")
+Topic.create(name: "Entertainment")
+Topic.create(name: "Sports")
+Topic.create(name: "Science")
 Topic.create(name: "Health")
-Topic.create(name: "Politics")
 
 # User seeds
 User.create(first_name: "Steven", last_name: "Miller", email: "stevenmiller888@me.com", password: "qwerty", password_confirmation: "qwerty")
