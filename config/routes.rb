@@ -1,6 +1,6 @@
 NewsTract::Application.routes.draw do
 
   #Temporary root
-  root 'articles#index'
+  root 'subscriptions#index'
  
 end
