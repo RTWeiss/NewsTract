@@ -14,25 +14,33 @@
  */
 
 body {
-  background-image: url("http://i.imgur.com/Ipb5AyR.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
+
+ .navbar-fixed-top {
+  background-color: #3498db;
+ }
+
+#brand,
+#pull-right {
+  color: black;
+}
+
+#nav-item {
+  color: black;
+}
 
 #footer {
   position: relative;
   left: 40px;
   bottom: -80px;
-  color: white;
 }
 
 #topics {
   position: relative;
   top: 40px;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 form {
@@ -63,5 +71,5 @@ form {
 
 .topic_name {
   text-align: center;
-  color: white;
+  color: black;
 }

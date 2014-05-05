@@ -9,10 +9,11 @@ class ArticlesController < ApplicationController
     doc = Nokogiri::HTML(open('https://news.google.com'))
     # Extract the articles using the CSS selectors
     articles = doc.css(".esc-layout-article-cell")
-    # Extract the title from the articles
+  
     articles.each do |article|
-      # There are multiple titles per article, this will use the first title
+      # Extract the first title from the articles
       title = article.css("span.titletext").first.text
+      # Extract the summary from the articles
       summary = article.css(".esc-lead-snippet-wrapper").text
     end
     # Create the article with the title and summary

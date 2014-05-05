@@ -46,3 +46,8 @@ group :development, :test do
   # automate generation of entity relationship diagram, use rake erd command
   gem 'rails-erd'
 end
+
+group :production do
+  # use rails_12factor gem to work with heroku
+  gem 'rails_12factor'
+end
