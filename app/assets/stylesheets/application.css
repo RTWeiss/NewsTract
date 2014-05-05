@@ -8,6 +8,60 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap.css
  *= require_self
  *= require_tree .
  */
+
+body {
+  background-image: url("http://i.imgur.com/Ipb5AyR.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+
+#footer {
+  position: relative;
+  left: 40px;
+  bottom: -80px;
+  color: white;
+}
+
+#topics {
+  position: relative;
+  top: 40px;
+  text-align: center;
+  color: white;
+}
+
+form {
+  position: relative;
+  top: 100px;
+  text-align: center;
+}
+
+#tile1,
+#tile2,
+#tile3,
+#tile4,
+#tile5,
+#tile6 {
+  height: 250px;
+  width: 300px;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 10px;
+  opacity: 0.9;
+}
+
+.col-md-4 {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+.topic_name {
+  text-align: center;
+  color: white;
+}

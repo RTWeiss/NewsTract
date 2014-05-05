@@ -1,6 +1,7 @@
 NewsTract::Application.routes.draw do
 
-  #Temporary root
-  root 'subscriptions#index'
- 
+  devise_for :users
+
+  root 'articles#index'
+
 end

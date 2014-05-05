@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   has_many :subscriptions
   has_many :topics, through: :subscriptions
-
-  # Adds methods to set and authenticate against a BCrypt password,
-  # Adds adds validations for presence of password on create and confirmation of password 
-  has_secure_password
   
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 end
