@@ -18,6 +18,11 @@
   height: 60px;
 }
 
+.navbar-brand {
+  position: relative;
+  left: 5px;
+}
+
 .pull-right {
   position: relative;
   left: 70px;
@@ -56,53 +61,20 @@
   bottom: 10px;
 }
 
+/* CSS for Edit Profile, edit.html.erb */
 
-
-
-#subscribe_button {
+.col-md-6 {
   position: relative;
-  left: -80px;
-  bottom: 30px;
-}
-
-#my_topic_list {
-  position: relative;
-  left: 10px;
-  top: 50px;
-}
-
-#topic_item {
-  position: relative;
-  left: 120px;
-}
-
-#topics {
-  position: relative;
-  top: 50px;
-  text-align: center;
-  color: #000;
-}
-
-form {
-  position: relative;
-  left: 200px;
+  top: 100px;
   text-align: center;
 }
 
-#MyTopics {
+/* CSS for New Session, new.html.erb,
+  and for New Registration new.html.erb
+ */
+
+.form-inline {
   position: relative;
-  left: 100px;
-}
-
-#addnewtopics {
- position: relative;
- top: 40px;
- left: 110px;
-}
-
-.topic_name {
+  top: 100px;
   text-align: center;
-  color: #000;
-  position: relative;
-  top: -20px;
 }
