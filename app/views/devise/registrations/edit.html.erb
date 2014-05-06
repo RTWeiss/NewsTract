@@ -1,36 +1,68 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
 <div class="row">
 
-  <div class="col-md-6"> 
+  <div class="col-md-6">
+  
     <h1> My Topics </h1>
     <% current_user.subscriptions.each do |subscription| %>
       <% topic = Topic.find_by_id(subscription.topic_id) %>
       <% if !topic.nil? %>
-            <%= topic.name %>
-            <%= link_to "Delete", subscription_path(subscription), :method => :delete, :class => "btn btn-danger btn-xs"%>
+        <%= topic.name %>
+        <%= link_to "Delete", subscription_path(subscription), :method => :delete, :class => "btn btn-danger btn-xs" %>
       <% end %>
     <% end %>
+
   <%= link_to "Add New Topics", topics_path, :method => :get, :class => "btn btn-success" %>
+</div>
+
+<div class="col-md-6">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }, :class => "form-horizontal") do |f| %>
+<%= devise_error_messages! %>
+    
+  <div class="form-group">
+    <%= f.label :email, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Email" %>
+    </div>
+  </div>
+  
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    Currently waiting confirmation for: <%= resource.unconfirmed_email %>
+  <% end %>
+  
+  <div class="form-group">
+    <%= f.label :password, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "Password" %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :password_confirmation, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", :placeholder => "Password" %>
+    </div>
+  </div>
+      
+  <div class="form-group">
+    <%= f.label :current_password, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.password_field :current_password, autocomplete: "off", :class => "form-control", :placeholder => "Password" %>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit "Update", :class => "btn btn-success" %>
+    </div>
   </div>
 
-  <div class="col-md-6">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= devise_error_messages! %>
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true %>
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        Currently waiting confirmation for: <%= resource.unconfirmed_email %>
-    <% end %>
-    <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: "off" %>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    <%= f.label :current_password %>
-    <%= f.password_field :current_password, autocomplete: "off" %>
-    <%= f.submit "Update", :class => "btn btn-success" %>
-    <% end %>
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => "btn btn-danger" %>
+<% end %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => "btn btn-danger" %>
+    </div>
   </div>
+</div>
 
 </div>

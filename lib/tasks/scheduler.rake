@@ -21,7 +21,7 @@ task :update_articles => :environment do
     # Extract the articles using the 'item' selector
     articles = doc.css('item')
     # Choose the first article as the main article
-    main_article = articles[0]
+    main_article = articles[url]
     # Extract the main article's link 
     main_article_link = main_article.at('link').next_sibling.text
     # Use Pismo to provide structure to the original article
@@ -38,5 +38,22 @@ task :update_articles => :environment do
     article.summary = summary
     article.save
   end
+
+# while loop
+#If original_doc.title = "" || original_doc.body = ""
+#
       
+
+
+
+
+
+
 end
+
+
+
+
+
+
+
