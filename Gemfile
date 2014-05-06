@@ -30,6 +30,12 @@ gem 'nokogiri'
 # Use Devise for authentication
 gem 'devise'
 
+# Use Pismo for getting structured data from HTML
+gem 'pismo'
+
+# Use Sumitup to summarize the articles
+gem 'sumitup'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

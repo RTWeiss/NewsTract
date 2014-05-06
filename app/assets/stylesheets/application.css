@@ -30,23 +30,49 @@ body {
   color: black;
 }
 
-#footer {
+#subscribe_button {
   position: relative;
-  left: 40px;
-  bottom: -80px;
+  left: -80px;
+  bottom: 30px;
+}
+
+#topic_name {
+  font-size: 18px;
+}
+
+#my_topic_list {
+  position: relative;
+  left: 10px;
+  top: 50px;
+}
+
+#topic_item {
+  position: relative;
+  left: 120px;
 }
 
 #topics {
   position: relative;
-  top: 40px;
+  top: 50px;
   text-align: center;
   color: black;
 }
 
 form {
   position: relative;
-  top: 100px;
+  left: 200px;
   text-align: center;
+}
+
+#MyTopics {
+  position: relative;
+  left: 100px;
+}
+
+#addnewtopics {
+ position: relative;
+ top: 40px;
+ left: 110px;
 }
 
 #tile1,

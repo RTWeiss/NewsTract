@@ -1,5 +1,21 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
+<div id="my_topic_list"> 
+<h1 id="MyTopics"> My Topics </h1>
+<% current_user.subscriptions.each do |subscription| %>
+  <% topic = Topic.find_by_id(subscription.topic_id) %>
+  <% if !topic.nil? %>
+  <div id="topic_item">
+  <br>
+  <%= topic.name %>
+  <%= link_to "Delete", subscription_path(subscription), :method => :delete, data: { confirm: "You sure?" }, :class => "btn btn-danger btn-xs"%>
+  </br>
+  </div>
+  <% end %>
+<% end %>
+<%= link_to "Add New Topics", topics_path, :method => :get, :class => "btn btn-success", :id => "addnewtopics" %>
+</div>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -23,3 +39,7 @@
 <% end %>
 
 <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => "btn btn-danger" %>
+
+<!-- Add button to add subscriptions -->
+
+
