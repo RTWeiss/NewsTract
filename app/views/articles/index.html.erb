@@ -1,110 +1,17 @@
 <div class="row">
 
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[2].topic_id) %>
-        <h3 class="article-topic"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[2].title %></h5>
-        <p class="article-paragraph"><%= @articles[2].summary %></p>
+  <% for subscription in current_user.subscriptions %>
+    <% if Article.find_by_topic_id(subscription.topic_id) %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3 class="article-topic"><%= Topic.find_by_id(subscription.topic_id).name %></h3>
+            <h5 class="article-title"><%= Article.find_by_topic_id(subscription.topic_id).title %></h5>
+            <p class="article-paragraph"><%= Article.find_by_topic_id(subscription.topic_id).summary %></p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    <% end %>
+  <% end %>
 
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[1].topic_id) %>
-        <h3 class="article-topic"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[1].title %></h5>
-        <p class="article-paragraph"><%= @articles[1].summary %></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[3].topic_id) %>
-        <h3 class="article-topic"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[3].title %></h5>
-        <p class="article-paragraph"><%= @articles[3].summary %></p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="row">
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[5].topic_id) %>
-        <h3 class="article-topic"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[5].title %></h5>
-        <p class="article-paragraph"><%= @articles[5].summary %></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[4].topic_id) %>
-        <h3 class="article-topic"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[4].title %></h5>
-        <p class="article-paragraph"><%= @articles[4].summary %></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[2].topic_id) %>
-        <h3 class="article-topic"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[2].title %></h5>
-        <p class="article-paragraph"><%= @articles[2].summary %></p>
-      </div>
-    </div>
-  </div>
-  
-</div>
-
-<div class="row">
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[2].topic_id) %>
-        <h3 class="article-topic"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[2].title %></h5>
-        <p class="article-paragraph"><%= @articles[2].summary %></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[2].topic_id) %>
-        <h3 class="article-title"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[2].title %></h5>
-        <p class="article-paragraph"><%= @articles[2].summary %></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <div class="caption">
-        <% topic = Topic.find(@articles[1].topic_id) %>
-        <h3 class="article-topic"> <%= topic.name %> </h3>
-        <h5 class="article-title"><%= @articles[1].title %></h5>
-        <p class="article-paragraph"><%= @articles[1].summary %></p>
-      </div>
-    </div>
-  </div>
-  
 </div>

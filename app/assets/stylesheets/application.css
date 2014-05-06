@@ -42,6 +42,7 @@
   left: 15px;
   height: 250px;
   width: 380px;
+  overflow: hidden; /* Don't let the summary overflow */
 }
 
 .article-topic {
@@ -73,8 +74,4 @@
   and for New Registration new.html.erb
  */
 
-.form-inline {
-  position: relative;
-  top: 100px;
-  text-align: center;
-}
+
