@@ -1,25 +1,29 @@
 <div class="row">
 
   <div class="col-md-4">
-    <%# <% topic = Topic.find(@articles[2].topic_id) %>
-    <%# <h5 class="topic_name"> <%= topic.name %> </h5>
-    <div id="tile1">
-      <center><h5><%= @articles[2].title %></h5></center>
-      <p><%= @articles[2].summary %></p>
-    </div>
+    <% if @articles.nil[2].nil? %>
+      <% %>
+    <% else %>
+      <% topic = Topic.find(@articles[2].topic_id) %>
+      <h5 class="topic_name"> <%= topic.name %> </h5>
+      <div id="tile1">
+        <center><h5><%= @articles[2].title %></h5></center>
+        <p><%= @articles[2].summary %></p>
+      </div>
+    <% end %>
   </div>
 
   <div class="col-md-4">
-    <%# <% topic = Topic.find(@articles[3].topic_id) %>
-    <%# <h5 class="topic_name"> <%= topic.name %> </h5>
+    <% topic = Topic.find(@articles[3].topic_id) %>
+    <h5 class="topic_name"> <%= topic.name %> </h5>
     <div id="tile2">
       <center><h5><%= @articles[3].title %></h5></center>
       <p><%= @articles[3].summary %></p>
   </div></div>
 
   <div class="col-md-4">
-    <%# <% topic = Topic.find(@articles[1].topic_id) %>
-    <%# <h5 class="topic_name"> <%= topic.name %> </h5>
+    <% topic = Topic.find(@articles[1].topic_id) %>
+    <h5 class="topic_name"> <%= topic.name %> </h5>
     <div id="tile3">
       <center><h5><%= @articles[1].title %></h5></center>
       <p><%= @articles[1].summary %></p>
@@ -31,8 +35,8 @@
 <div class="row">
 
   <div class="col-md-4">
-   <%#  <% topic = Topic.find(@articles[5].topic_id) %>
-    <%# <h5 class="topic_name"> <%= topic.name %> </h5>
+    <% topic = Topic.find(@articles[5].topic_id) %>
+    <h5 class="topic_name"> <%= topic.name %> </h5>
     <div id="tile4">
       <center><h5><%= @articles[5].title %></h5></center>
       <p><%= @articles[5].summary %></p>
@@ -40,8 +44,8 @@
   </div>
 
   <div class="col-md-4">
-   <%#  <% topic = Topic.find(@articles[1].topic_id) %>
-    <%# <h5 class="topic_name"> <%= topic.name %> </h5>
+    <% topic = Topic.find(@articles[1].topic_id) %>
+    <h5 class="topic_name"> <%= topic.name %> </h5>
     <div id="tile5">
       <center><h5><%= @articles[1].title %></h5></center>
       <p><%= @articles[1].summary %></p>
@@ -49,8 +53,8 @@
   </div>
 
   <div class="col-md-4">
-   <%#  <% topic = Topic.find(@articles[4].topic_id) %>
-   <%#  <h5 class="topic_name"> <%= topic.name %> </h5>
+    <% topic = Topic.find(@articles[4].topic_id) %>
+    <h5 class="topic_name"> <%= topic.name %> </h5>
     <div id="tile6">
       <center><h5><%= @articles[4].title %></h5></center>
       <p><%= @articles[4].summary %></p>
