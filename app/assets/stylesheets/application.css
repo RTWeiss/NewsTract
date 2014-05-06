@@ -8,36 +8,61 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap.css
+ *= require bootstrap.min
  *= require_self
  *= require_tree .
  */
 
-body {
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
- }
-
- .navbar-fixed-top {
-  background-color: #3498db;
- }
-
-#brand,
-#pull-right {
-  color: black;
+/* CSS for Layout, application.html.erb */
+.navbar-fixed-top {
+  height: 60px;
 }
 
-#nav-item {
-  color: black;
+.pull-right {
+  position: relative;
+  left: 70px;
+  bottom: 10px;
 }
+
+/* CSS for Topics, index.html.erb */
+.navbar-brand {
+  position: relative;
+  top: 5px;
+  right: 40px;
+}
+
+.thumbnail {
+  position: relative;
+  top: 80px;
+  left: 15px;
+  height: 250px;
+  width: 380px;
+}
+
+.article-topic {
+  position: relative;
+  bottom: 25px;
+  text-align: center;
+}
+
+.article-title {
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+}
+
+.article-paragraph {
+  position: relative;
+  bottom: 10px;
+}
+
+
+
 
 #subscribe_button {
   position: relative;
   left: -80px;
   bottom: 30px;
-}
-
-#topic_name {
-  font-size: 18px;
 }
 
 #my_topic_list {
@@ -55,7 +80,7 @@ body {
   position: relative;
   top: 50px;
   text-align: center;
-  color: black;
+  color: #000;
 }
 
 form {
@@ -75,27 +100,9 @@ form {
  left: 110px;
 }
 
-#tile1,
-#tile2,
-#tile3,
-#tile4,
-#tile5,
-#tile6 {
-  height: 250px;
-  width: 300px;
-  border: 1px solid black;
-  background-color: white;
-  font-size: 10px;
-  opacity: 0.9;
-}
-
-.col-md-4 {
-  position: relative;
-  top: 50px;
-  left: 50px;
-}
-
 .topic_name {
   text-align: center;
-  color: black;
+  color: #000;
+  position: relative;
+  top: -20px;
 }
