@@ -30,17 +30,19 @@ task :update_articles => :environment do
     title = result["sm_api_title"]
     # Extract the summary
     summary = result["sm_api_content"]
-    summary.gsub!("&#039;", '\'')
+    # Replace &#039; with '
+    title = title.gsub("&#039;", "'")
+    summary = summary.gsub("&#039;", "'")
+    # Replace \ with nothing
+    title = title.gsub("\\", "")
+    summary = summary.gsub("\\", "'")
     # Create the article with the title, summary, and topic_id, which is the element's index plus 1
     article = Article.find_by_topic_id(url_array.index(url) + 1)
     article.title = title
     article.summary = summary
     article.save
   end
-
-# while loop
-#If original_doc.title = "" || original_doc.body = ""
-
+  
 end
 
 
