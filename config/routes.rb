@@ -2,8 +2,10 @@ NewsTract::Application.routes.draw do
 
   resources :articles, :subscriptions, :topics
 
-  devise_for :users
+  #Added so that we can route the user to the topics page after signing in
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
-  root 'articles#index'
+  #Root is the sign up page
+  root 'sites#index'
 
 end

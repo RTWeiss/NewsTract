@@ -1,5 +1,3 @@
-#Need to add if statements for checking if no title present
-
 desc 'Parse articles from Google news, summarize the originals, and update each topic\'s article'
 task :update_articles => :environment do
   # Store the topic urls in strings
@@ -21,17 +19,18 @@ task :update_articles => :environment do
     # Extract the articles using the 'item' selector
     articles = doc.css('item')
     # Choose the first article as the main article
-    main_article = articles[url]
+    main_article = articles[0]
     # Extract the main article's link 
     main_article_link = main_article.at('link').next_sibling.text
-    # Use Pismo to provide structure to the original article
-    original_doc = Pismo::Document.new(main_article_link)
-    # Extract the article's titles
-    title = original_doc.title
-    # Instantialize a new Sumitup parser
-    parser = Sumitup::Parser.new
-    # Use Sumitup to generate a summary of the article's body
-    summary = parser.summarize(original_doc.body)
+    # Use Typhoeus to make a request to the summarization API
+    response = Typhoeus.get("http://api.smmry.com/&SM_API_KEY=97BF8700E5&SM_URL=#{main_article_link}&SM_QUOTE_AVOID")
+    # Parse the JSON response
+    result = JSON.parse(response.body)
+    # Extract the title
+    title = result["sm_api_title"]
+    # Extract the summary
+    summary = result["sm_api_content"]
+    summary.gsub!("&#039;", '\'')
     # Create the article with the title, summary, and topic_id, which is the element's index plus 1
     article = Article.find_by_topic_id(url_array.index(url) + 1)
     article.title = title
@@ -41,13 +40,6 @@ task :update_articles => :environment do
 
 # while loop
 #If original_doc.title = "" || original_doc.body = ""
-#
-      
-
-
-
-
-
 
 end
 

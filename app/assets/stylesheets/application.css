@@ -13,6 +13,14 @@
  *= require_tree .
  */
 
+ /* CSS for Site, index.html.erb */
+
+ .welcome {
+  position: relative;
+  top: 200px;
+  text-align: center;
+ }
+
 /* CSS for Layout, application.html.erb */
 
 .navbar-fixed-top {
@@ -30,7 +38,7 @@
   bottom: 10px;
 }
 
-/* CSS for Topics, index.html.erb */
+/* CSS for Subscriptions, index.html.erb, and Topics, index.html.erb  */
 .navbar-brand {
   position: relative;
   top: 5px;
@@ -75,16 +83,14 @@
   and for New Registration new.html.erb
  */
 
+.new_user,
+.edit_user {
+  position: relative;
+  top: 150px;
+  left: 300px;
+  width: 600px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.form-group {
+  padding: 20px;
+}

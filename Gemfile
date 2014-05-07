@@ -33,6 +33,9 @@ gem 'devise'
 # Use Pismo for getting structured data from HTML
 gem 'pismo'
 
+# Use Typhoeus for API requests
+gem 'typhoeus'
+
 # Use Sumitup to summarize the articles
 gem 'sumitup'
 

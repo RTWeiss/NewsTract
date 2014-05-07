@@ -1,8 +1,20 @@
-<div id="topics">
-<h1>Topics</h1>
+<div class="row">
 
-<% @topics.each do |topic| %>
-  <div id="topic_name"><%=  topic.name %></div>
-  <%= button_to "Subscribe", subscriptions_path(topic_id: topic.id), method: :post, :class => "btn btn-success", :id => "subscribe_button" %>
-<% end %>
-</div>
+  <div class="col-md-6">
+    <% @topics.each do |topic| %>
+    <%=  topic.name %>
+    <%= link_to "Subscribe", subscriptions_path(topic_id: topic.id), method: :post, :class => "btn btn-success" %>
+    <br><br>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <% @subscriptions.each do |subscription| %>
+    <% topic = Topic.find_by_id(subscription.topic_id) %>
+    <%= topic.name %>
+    <%= link_to "Unsubscribe", subscription_path(subscription), :method => :delete, :class => "btn btn-danger" %>
+    <br><br>
+    <% end %>
+  </div>
+  
+</div> 

@@ -1,0 +1,17 @@
+<div class="row">
+
+  <% @subscriptions.each do |subscription| %>
+    <% if subscription.topic.article %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3 class="article-topic"><%= subscription.topic.name %></h3>
+            <h5 class="article-title"><%= subscription.topic.article.title %></h5>
+            <p class="article-paragraph"><%= subscription.topic.article.summary %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>
