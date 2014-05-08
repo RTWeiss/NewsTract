@@ -69,13 +69,15 @@ body {
   color: black;
 }
 
+.sign-up-btn:hover,
+.sign-in-btn:hover,
 .navbar-btn:hover {
   background-color: black;
   color: white;
 }
 
 .addtopicbtn:hover {
-  background-color: #2ecc71;
+  background-color: green;
   color: black;
 }
 
