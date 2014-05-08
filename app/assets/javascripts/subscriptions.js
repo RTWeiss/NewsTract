@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on("page:load ready", function() {
   // If the user clicks on a div with class col-md-4...
   $('.newstract-preview').click(function(event) { 
     // Then the next level down element with a class newstract-preview that also has a class newstract_zoomed is assigned to isZoomed,
