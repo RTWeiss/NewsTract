@@ -58,10 +58,3 @@ task :update_articles => :environment do
   end
   
 end
-
-
-
-
-
-
-

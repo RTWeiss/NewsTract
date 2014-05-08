@@ -94,10 +94,10 @@ body {
   width: 170px;
 }
 
-.pull-right {
+.navbar-right {
   position: relative;
-  left: 70px;
-  bottom: 10px;
+  left: 40px;
+  top: 5px;
 }
 
 /* CSS for Subscriptions, index.html.erb, and Topics, index.html.erb  */
