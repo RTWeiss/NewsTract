@@ -20,5 +20,5 @@ class SubscriptionsController < ApplicationController
     Subscription.find(params[:id]).destroy
     redirect_to topics_path
   end
-
+  
 end

@@ -1,4 +1,35 @@
-<h1 class="welcome">Welcome to NewsTract</h1>
+<h1 class="welcome">Welcome to NewsTract, the best way to read summarized articles</h1>
 
-<!-- #Add screenshots of the app
-#Links to an about me, contact page -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://i.imgur.com/CRsCWg7.png" class="img-responsive" alt="Responsive image">
+    </div>
+    <div class="item">
+      <img src="http://i.imgur.com/qAVdPze.png" class="img-responsive" alt="Responsive image">
+    </div>
+    <div class="item">
+      <img src="http://i.imgur.com/TRuYkAU.png" class="img-responsive" alt="Responsive image">
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+</div>
+
+<%= link_to 'About NewsTract', '/sites/about', :class => 'btn btn-default navbar-btn', :id => 'about-link' %> 
+<%= link_to 'FAQ', '/sites/faq', :class => 'btn btn-default navbar-btn', :id => 'faq-link' %> 

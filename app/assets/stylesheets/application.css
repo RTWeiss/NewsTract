@@ -15,21 +15,47 @@
 
  /* CSS for Site, index.html.erb */
 
- .welcome {
+body {
+  background-image: url("http://i.imgur.com/O1dOObM.png");
+}
+
+.slide {
+    position: relative;
+    top: 150px;
+    left: 330px;
+    height: 260px;
+    width: 580px;
+}
+
+.welcome {
   position: relative;
-  top: 200px;
+  top: 100px;
   text-align: center;
- }
+}
+
+#about-link {
+  position: relative;
+  top: 250px;
+  left: 380px;
+}
+
+#faq-link {
+  position: relative;
+  top: 250px;
+  left: 450px;
+}
 
 /* CSS for Layout, application.html.erb */
 
 .navbar-fixed-top {
   height: 60px;
+  background-color: #2BB24C;
 }
 
 .navbar-brand {
   position: relative;
-  left: 5px;
+  left: 35px;
+  top: 5px;
 }
 
 .pull-right {
@@ -39,11 +65,6 @@
 }
 
 /* CSS for Subscriptions, index.html.erb, and Topics, index.html.erb  */
-.navbar-brand {
-  position: relative;
-  top: 5px;
-  right: 40px;
-}
 
 .thumbnail {
   position: relative;
@@ -71,6 +92,12 @@
   bottom: 10px;
 }
 
+#topics-row {
+  position: relative;
+  top: 130px;
+  right: 60px;
+}
+
 /* CSS for Edit Profile, edit.html.erb */
 
 .col-md-6 {
@@ -93,4 +120,21 @@
 
 .form-group {
   padding: 20px;
+}
+
+/* CSS on Zoom */
+
+.newstract_zoomed {
+  float:none;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  padding-left: 5px;
+  margin-left: 10px;
+}
+
+.newstract_zoomed .thumbnail {
+  width: 100%;
+  height: auto;
+  min-height: 250px;
 }

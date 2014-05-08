@@ -8,4 +8,7 @@ NewsTract::Application.routes.draw do
   #Root is the sign up page
   root 'sites#index'
 
+  get '/sites/about', to: 'sites#about'
+  get '/sites/faq', to: 'sites#faq'
+
 end

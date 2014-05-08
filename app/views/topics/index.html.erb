@@ -1,20 +1,27 @@
-<div class="row">
+<div class="row", id="topics-row">
+    <% arr = [] %>
+    <% current_user.subscriptions.each do |subscription| %>
+      <% arr.push(subscription.topic_id) %>
+      <div class="row">
+        <div class="col-md-1 col-md-offset-5">
+          <%= Topic.find(subscription.topic_id).name %>
+        </div>
+        <div class="col-md-1" >
+          <%= link_to "Unsubscribe", subscription_path(subscription), :method => :delete, :class => "btn btn-danger pull-right" %>
+        </div>
+      </div><br>
+    <% end %>
 
-  <div class="col-md-6">
     <% @topics.each do |topic| %>
-    <%=  topic.name %>
-    <%= link_to "Subscribe", subscriptions_path(topic_id: topic.id), method: :post, :class => "btn btn-success" %>
-    <br><br>
+      <% unless arr.include? topic.id %>
+        <div class="row">
+          <div class="col-md-1 col-md-offset-5">
+            <%= topic.name %><br>
+          </div>
+        <div class="col-md-1" >
+          <%= link_to "Subscribe", subscriptions_path(topic_id: topic.id), method: :post, :class => "btn btn-success pull-right" %><br>
+        </div>
+        </div><br>
+      <% end %>
     <% end %>
-  </div>
-
-  <div class="col-md-6">
-    <% @subscriptions.each do |subscription| %>
-    <% topic = Topic.find_by_id(subscription.topic_id) %>
-    <%= topic.name %>
-    <%= link_to "Unsubscribe", subscription_path(subscription), :method => :delete, :class => "btn btn-danger" %>
-    <br><br>
-    <% end %>
-  </div>
-  
-</div> 
+</div>
