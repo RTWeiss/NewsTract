@@ -33,9 +33,6 @@ gem 'devise'
 # Use Typhoeus for API requests
 gem 'typhoeus'
 
-# Use Capybara for more descripve RSpec tests
-gem 'capybara'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -48,6 +45,10 @@ group :development, :test do
   gem 'rspec-rails'
   # automate generation of entity relationship diagram, use rake erd command
   gem 'rails-erd'
+  # Use Factory girl for better testing
+  gem 'factory_girl_rails'
+  # User faker to generate more random tests
+  gem 'faker'
 end
 
 group :production do

@@ -32,9 +32,9 @@ body {
 .slide {
     position: relative;
     top: 150px;
-    left: 330px;
-    height: 260px;
-    width: 580px;
+    left: 280px;
+    height: 320px;
+    width: 680px;
 }
 
 .welcome {
@@ -45,13 +45,13 @@ body {
 
 #about-link {
   position: relative;
-  top: 250px;
+  top: 220px;
   left: 380px;
 }
 
 #faq-link {
   position: relative;
-  top: 250px;
+  top: 220px;
   left: 450px;
 }
 
@@ -76,9 +76,14 @@ body {
   color: white;
 }
 
+.addtopicbtn {
+  background-color: gray;
+  color: white;
+}
+
 .addtopicbtn:hover {
-  background-color: green;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 #logo {

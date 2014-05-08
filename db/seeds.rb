@@ -25,3 +25,9 @@ Article.create(title: "Test", summary: "Test", topic_id: 5)
 Article.create(title: "Test", summary: "Test", topic_id: 6)
 Article.create(title: "Test", summary: "Test", topic_id: 7)
 Article.create(title: "Test", summary: "Test", topic_id: 8)
+
+# User seeds
+User.create(email: "stevenmiller888@me.com", password: "qwerty", password_confirmation: "qwerty")
+User.create(email: "user2@example.com", password: "password123", password_confirmation: "password123")
+User.create(email: "user3@testing.com", password: "pass987", password_confirmation: "pass987")
+User.create(email: "user4@newstract.com", password: "apple9", password_confirmation: "apple9")
