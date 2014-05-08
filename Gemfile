@@ -33,8 +33,8 @@ gem 'devise'
 # Use Typhoeus for API requests
 gem 'typhoeus'
 
-# Use Sumitup to summarize the articles
-gem 'sumitup'
+# Use Capybara for more descripve RSpec tests
+gem 'capybara'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
