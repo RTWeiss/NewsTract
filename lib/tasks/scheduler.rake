@@ -43,6 +43,9 @@ task :update_articles => :environment do
       title = result["sm_api_title"]
       summary = result["sm_api_content"]
     end
+
+    title = title.gsub("&prime;", "'")
+    summary = summary.gsub("&prime;", "'")
     # Replace &pound; with £
     title = title.gsub("&pound;", "£")
     summary = summary.gsub("&pound;", "£")
