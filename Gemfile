@@ -24,7 +24,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-# Use Nokogiri for HTML parsing of articles
+# Use Nokogiri for parsing articles
 gem 'nokogiri'
 
 # Use Devise for authentication
