@@ -33,8 +33,6 @@ gem 'devise'
 # Use Typhoeus for API requests
 gem 'typhoeus'
 
-gem 'font_assets'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
