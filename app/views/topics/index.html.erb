@@ -6,7 +6,7 @@
         <div class="col-md-1 col-md-offset-5">
           <%= Topic.find(subscription.topic_id).name %>
         </div>
-        <div class="col-md-1" >
+        <div class="col-md-2" >
           <%= link_to "Unsubscribe", subscription_path(subscription), :method => :delete, :class => "btn btn-danger pull-right" %>
         </div>
       </div><br>
@@ -18,7 +18,7 @@
           <div class="col-md-1 col-md-offset-5">
             <%= topic.name %><br>
           </div>
-        <div class="col-md-1" >
+        <div class="col-md-2" >
           <%= link_to "Subscribe", subscriptions_path(topic_id: topic.id), method: :post, :class => "btn btn-success pull-right" %><br>
         </div>
         </div><br>

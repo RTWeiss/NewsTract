@@ -69,6 +69,10 @@ body {
   color: black;
 }
 
+.col-md-offset-5 {
+  font-size: 20px;
+}
+
 .sign-up-btn:hover,
 .sign-in-btn:hover,
 .navbar-btn:hover {
@@ -76,9 +80,20 @@ body {
   color: white;
 }
 
+.btn-danger,
+.btn-success {
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.sign-in-btn,
+.sign-up-btn,
+.navbar-btn,
 .addtopicbtn {
-  background-color: gray;
+  background-color: #65BBA8;
   color: white;
+  font-weight: lighter;
+  letter-spacing: 1px;
 }
 
 .addtopicbtn:hover {
