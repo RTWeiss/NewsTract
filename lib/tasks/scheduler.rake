@@ -26,7 +26,7 @@ task :update_articles => :environment do
     # Extract the main article's link 
     main_article_link = main_article.at('link').next_sibling.text
     # Use Typhoeus to make a request to the summarization API
-    response = Typhoeus.get("http://api.smmry.com/&SM_API_KEY=97BF8700E5&SM_URL=#{main_article_link}&SM_QUOTE_AVOID")
+    response = Typhoeus.get("http://api.smmry.com/&SM_API_KEY=97BF8700E5&SM_URL=#{main_article_link}&SM_QUOTE_AVOID&SM_LENGTH=4")
     # Parse the JSON response
     result = JSON.parse(response.body)
     # Extract the title
@@ -38,12 +38,17 @@ task :update_articles => :environment do
     if title.nil? || summary.nil?
       main_article = articles[1]
       main_article_link = main_article.at('link').next_sibling.text
-      response = Typhoeus.get("http://api.smmry.com/&SM_API_KEY=97BF8700E5&SM_URL=#{main_article_link}&SM_QUOTE_AVOID")
+      response = Typhoeus.get("http://api.smmry.com/&SM_API_KEY=97BF8700E5&SM_URL=#{main_article_link}&SM_QUOTE_AVOID&SM_LENGTH=4")
       result = JSON.parse(response.body)
       title = result["sm_api_title"]
       summary = result["sm_api_content"]
     end
-
+    # Replace &pound; with £
+    title = title.gsub("&pound;", "£")
+    summary = summary.gsub("&pound;", "£")
+    # Replace &#8216; with '
+    title = title.gsub("&#8216;", "'")
+    summary = summary.gsub("&#8216;", "'")
     # Replace &#039; with '
     title = title.gsub("&#039;", "'")
     summary = summary.gsub("&#039;", "'")
