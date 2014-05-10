@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-# Use jquery as the JavaScript library
+# Use jQuery as the JavaScript library
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -39,11 +39,11 @@ group :doc do
 end
 
 group :development, :test do
-  # loads environment variables from .env into ENV in development and test
+  # Loads environment variables from .env into ENV in development and test
   gem 'dotenv-rails'
-  # rspec testing framework
+  # Rspec testing framework
   gem 'rspec-rails'
-  # automate generation of entity relationship diagram, use rake erd command
+  # Automate generation of entity relationship diagram, use rake erd command
   gem 'rails-erd'
   # Use Factory girl for better testing
   gem 'factory_girl_rails'
@@ -52,6 +52,6 @@ group :development, :test do
 end
 
 group :production do
-  # use rails_12factor gem to work with heroku
+  # Use rails_12factor gem to work with heroku
   gem 'rails_12factor'
 end
