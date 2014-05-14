@@ -205,3 +205,18 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+/* Search CSS */
+
+.table-responsive {
+  position: relative;
+  top: 100px;
+}
+
+.new_simple_search {
+  position: relative;
+  top: 100px;
+  left: 300px;
+  width: 600px;
+}
+
