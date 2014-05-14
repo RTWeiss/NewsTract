@@ -31,7 +31,7 @@
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-default navbar-btn' %>
           <% if request.env['PATH_INFO'] == subscriptions_path %>
             <%= link_to "Add Topics", topics_path, :method => :get, :class => "btn addtopicbtn btn-default" %>
-            <%= link_to "Search", search_articles_path, :class => 'btn btn-default navbar-btn' %>
+            <%#= link_to "Search", search_articles_path, :class => 'btn btn-default navbar-btn' %>
           <% end %>
         <% else %>
           <% if request.env['PATH_INFO'] == new_user_session_path %>
