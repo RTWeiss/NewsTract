@@ -1,4 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
+  
   protected
 
   # After signing up, the user is routed to /topics

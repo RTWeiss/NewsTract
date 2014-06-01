@@ -1,10 +1,10 @@
 class ArticlesController < ApplicationController
 
-  # def search
-  #   @search = SimpleSearch.new SimpleSearch.get_params(params)
-  #   if @search.valid?
-  #     @articles = @search.search_within Article.all, :title
-  #   end
-  # end
+  def index
+    @articles = Article.all
+    respond_to do |f|
+      f.json { render json: @articles, only: [:title, :summary] }
+    end
+  end
 
 end
