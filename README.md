@@ -6,6 +6,8 @@
 
 * There are 4 models: article, subscription, topic, and users. The app uses the rails-erd gem to automate generation of the entity relationship diagram
 
+![](http://i.imgur.com/wJ51Hk5.png)
+
 If you would like to run NewsTract locally, just clone this repo:
 
 ```
