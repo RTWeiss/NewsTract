@@ -12,13 +12,15 @@ If you would like to run NewsTract locally, just clone this repo:
 git clone https://github.com/stevenmiller888/NewsTract.git
 ```
 
-Do a bundle install:
+Run bundle install:
 
 ```
 bundle install
 ```
 
 And start the server:
+
 ```
 rails s
 ```
+
