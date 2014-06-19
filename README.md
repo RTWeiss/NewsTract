@@ -4,7 +4,7 @@
 
 * It uses Nokogiri to parse the articles, Devise for authentication, and Typheous for API requests
 
-* There are 4 models: article, subscription, topic, and users. The app uses the rails-erd gem to automate generation of the entity relationship diagram
+* There are 4 models: article, subscription, topic, and user. The app uses the rails-erd gem to automate generation of the entity relationship diagram
 
 ![](http://i.imgur.com/GCKoTbW.png)
 
