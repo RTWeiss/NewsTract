@@ -3,7 +3,7 @@
   <% i = 0 %>
   <% @subscriptions.each do |subscription| %>
     <% if subscription.topic.article %>
-      <div class="newstract-preview col-xs-6 col-sm-6 col-md-4">
+      <div class="newstract-preview col-sm-6 col-md-4">
         <div class="thumbnail">
           <div class="caption" data-toggle="modal" data-target=".<%=i%>">
             <h2 class="article-topic"><%= subscription.topic.name %></h2>
