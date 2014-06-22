@@ -220,3 +220,11 @@ body {
   width: 600px;
 }
 
+/* fix modal position for 480px devices */
+@media (max-width: 480px) 
+{
+    .modal.fade.in {
+        top: 10px;
+  }
+}
+
