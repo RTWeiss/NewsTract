@@ -15,14 +15,3 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require_tree .
-
-$(document).ready(function() {
-  $('.modal').on('shown', function() {
-    $(this).data('oldWindowPosition', $(window).scrollTop());
-    $('body, html').scrollTop(0);
-  });
-  $('.modal').on('hidden', function() {
-    var target = $(this).data('oldWindowPosition');
-    $('body, html').scrollTop(target);
-  });
-});
