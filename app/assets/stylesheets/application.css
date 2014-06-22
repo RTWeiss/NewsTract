@@ -23,12 +23,6 @@
   url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-@media (max-width: 767px) {
-  #content .modal.fade.in {
-    top: 5%;
-  }
-}
-
  /* CSS for Site, index.html.erb */
 
 body {
