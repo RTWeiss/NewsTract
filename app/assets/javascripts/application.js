@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(document).on("page:load ready", function() {
-  $('.newstract-preview').bind('click touchend', function(event) {
+  $('.newstract-preview').bind('click touchend', '.newstract-preview', function(event) {
     var isZoomed = $(event.target).closest('.newstract-preview').hasClass('newstract_zoomed');
     $(event.target).closest('.newstract-preview').parent().children('.newstract-preview').removeClass('newstract_zoomed');
     if (!isZoomed) {
