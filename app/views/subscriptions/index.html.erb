@@ -1,28 +1,15 @@
 <div class="row">
 
-  <% i = 0 %>
   <% @subscriptions.each do |subscription| %>
     <% if subscription.topic.article %>
       <div class="newstract-preview col-sm-6 col-md-4">
         <div class="thumbnail">
-          <div class="caption" data-toggle="modal" data-target=".<%=i%>">
             <h2 class="article-topic"><%= subscription.topic.name %></h2>
             <h3 class="article-title"><%= subscription.topic.article.title %></h3>
             <p class="article-paragraph"><%= subscription.topic.article.summary %></p>
-          </div>
-        </div>
-        <div class="modal fade <%=i%>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-md">
-            <div class="modal-content">
-              <h2 class="modal-article-topic"><%= subscription.topic.name %></h2>
-              <h3 class="modal-article-title"><%= subscription.topic.article.title %></h3>
-              <p class="modal-article-paragraph"><%= subscription.topic.article.summary %></p>
-            </div>
-          </div>
         </div>
       </div>
     <% end %>
-    <% i += 1 %>
   <% end %>
 
 </div>

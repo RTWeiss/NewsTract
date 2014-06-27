@@ -187,49 +187,19 @@ body {
   padding: 20px;
 }
 
-/* 
-  CSS for Modal 
-*/
+/* CSS on Zoom */
 
-.modal-backdrop, .modal-backdrop.fade.in {
-    opacity: 0.85;
+.newstract_zoomed {
+  float:none;
+  z-index: 10;
+  position: absolute;
+  width: 80%;
+  padding-left: 5px;
+  margin-left: 10px;
 }
 
-.modal-article-topic {
-  position: relative;
-  bottom: 25px;
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.modal-article-title {
-  position: relative;
-  bottom: 16px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.modal-article-paragraph {
-  position: relative;
-  bottom: 10px;
-  font-size: 18px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/*
-  Search CSS
-*/
-
-.table-responsive {
-  position: relative;
-  top: 100px;
-}
-
-.new_simple_search {
-  position: relative;
-  top: 100px;
-  left: 300px;
-  width: 600px;
+.newstract_zoomed .thumbnail {
+  width: 82%;
+  height: auto;
+  min-height: 250px;
 }

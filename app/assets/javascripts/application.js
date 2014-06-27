@@ -15,3 +15,13 @@
 //= require turbolinks
 //= require bootstrap.min
 //= require_tree .
+
+$(document).on("page:load ready", function() {
+  $('.newstract-preview').click(function(event) {
+    var isZoomed = $(event.target).closest('.newstract-preview').hasClass('newstract_zoomed');
+    $(event.target).closest('.newstract-preview').parent().children('.newstract-preview').removeClass('newstract_zoomed');
+    if (!isZoomed) {
+      $(event.target).closest('.newstract-preview').addClass('newstract_zoomed');
+    }
+  });
+});
