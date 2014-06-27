@@ -7,11 +7,8 @@ class SubscriptionsController < ApplicationController
   end
 
   def create
-    # If the user is already subscribed to the topic
-    if current_user.subscriptions.find_by_topic_id(params[:topic_id])
-        #Do nothing for now
-    else
-      #Create a new subscription for the user to the topic
+    # Unless the user is already subscribed to the topic, create a new one
+    unless current_user.subscriptions.find_by_topic_id(params[:topic_id])
       Subscription.create(user_id: current_user.id, topic_id: params[:topic_id])
     end
     redirect_to topics_path

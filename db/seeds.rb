@@ -7,27 +7,27 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Topic seeds
-Topic.create(name: "World") #Topic_id = 1
-Topic.create(name: "U.S.") #Topic_id = 2
-Topic.create(name: "Business") #Topic_id = 3
-Topic.create(name: "Technology") #Topic_id = 4
-Topic.create(name: "Entertainment") #Topic_id = 5
-Topic.create(name: "Sports") #Topic_id = 6
-Topic.create(name: "Science") #Topic_id = 7
-Topic.create(name: "Health") #Topic_id = 8
+Topic.create(:name => "World") #Topic_id = 1
+Topic.create(:name => "U.S.") #Topic_id = 2
+Topic.create(:name => "Business") #Topic_id = 3
+Topic.create(:name => "Technology") #Topic_id = 4
+Topic.create(:name => "Entertainment") #Topic_id = 5
+Topic.create(:name => "Sports") #Topic_id = 6
+Topic.create(:name => "Science") #Topic_id = 7
+Topic.create(:name => "Health") #Topic_id = 8
 
 # Article seeds
-Article.create(title: "Test", summary: "Test", topic_id: 1)
-Article.create(title: "Test", summary: "Test", topic_id: 2)
-Article.create(title: "Test", summary: "Test", topic_id: 3)
-Article.create(title: "Test", summary: "Test", topic_id: 4)
-Article.create(title: "Test", summary: "Test", topic_id: 5)
-Article.create(title: "Test", summary: "Test", topic_id: 6)
-Article.create(title: "Test", summary: "Test", topic_id: 7)
-Article.create(title: "Test", summary: "Test", topic_id: 8)
+Article.create(:title => "Test", :summary => "Test", :topic_id => 1)
+Article.create(:title => "Test", :summary => "Test", :topic_id => 2)
+Article.create(:title => "Test", :summary => "Test", :topic_id => 3)
+Article.create(:title => "Test", :summary => "Test", :topic_id => 4)
+Article.create(:title => "Test", :summary => "Test", :topic_id => 5)
+Article.create(:title => "Test", :summary => "Test", :topic_id => 6)
+Article.create(:title => "Test", :summary => "Test", :topic_id => 7)
+Article.create(:title => "Test", :summary => "Test", :topic_id => 8)
 
 # User seeds
-User.create(email: "stevenmiller888@me.com", password: "qwerty", password_confirmation: "qwerty")
-User.create(email: "user2@example.com", password: "password123", password_confirmation: "password123")
-User.create(email: "user3@testing.com", password: "pass987", password_confirmation: "pass987")
-User.create(email: "user4@newstract.com", password: "apple9", password_confirmation: "apple9")
+User.create(:email => "stevenmiller888@me.com", :password => "qwerty", :password_confirmation => "qwerty")
+User.create(:email => "user2@example.com", :password => "password123", :password_confirmation => "password123")
+User.create(:email => "user3@testing.com", :password => "pass987", :password_confirmation => "pass987")
+User.create(:email => "user4@newstract.com", :password => "apple9", :password_confirmation => "apple9")

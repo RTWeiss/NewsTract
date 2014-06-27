@@ -34,7 +34,7 @@ task :update_articles => :environment do
     # Extract the summary
     summary = result["sm_api_content"]
 
-    #Deal with nil scenario, check next article. Later put it in a while loop instead 
+    #Handle the nil scenario by moving to the next article
     if title.nil? || summary.nil?
       main_article = articles[1]
       main_article_link = main_article.at('link').next_sibling.text
@@ -44,6 +44,7 @@ task :update_articles => :environment do
       summary = result["sm_api_content"]
     end
 
+    # Replace &prime; with '
     title = title.gsub("&prime;", "'")
     summary = summary.gsub("&prime;", "'")
     # Replace &pound; with £
