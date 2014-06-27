@@ -193,6 +193,21 @@ body {
   cursor: pointer;
 }
 
+.newstract_zoomed-mobile {
+  float:none;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  padding-left: 5px;
+  margin-left: 10px;
+}
+
+.newstract_zoomed-mobile .thumbnail {
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+}
+
 .newstract_zoomed {
   float:none;
   z-index: 10;

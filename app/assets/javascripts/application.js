@@ -17,11 +17,20 @@
 //= require_tree .
 
 $(document).on("page:load ready", function() {
+  var isZoomed;
   $('.newstract-preview').on("click", function(event) {
-    var isZoomed = $(event.target).closest('.newstract-preview').hasClass('newstract_zoomed');
-    $(event.target).closest('.newstract-preview').parent().children('.newstract-preview').removeClass('newstract_zoomed');
-    if (!isZoomed) {
-      $(event.target).closest('.newstract-preview').addClass('newstract_zoomed');
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      isZoomed = $(event.target).closest('.newstract-preview').hasClass('newstract_zoomed-mobile');
+      $(event.target).closest('.newstract-preview').parent().children('.newstract-preview').removeClass('newstract_zoomed-mobile');
+      if (!isZoomed) {
+        $(event.target).closest('.newstract-preview').addClass('newstract_zoomed-mobile');
+      }
+    } else {
+      isZoomed = $(event.target).closest('.newstract-preview').hasClass('newstract_zoomed');
+      $(event.target).closest('.newstract-preview').parent().children('.newstract-preview').removeClass('newstract_zoomed');
+      if (!isZoomed) {
+        $(event.target).closest('.newstract-preview').addClass('newstract_zoomed');
+      }
     }
   });
 });
