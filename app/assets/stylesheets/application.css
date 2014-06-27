@@ -189,6 +189,10 @@ body {
 
 /* CSS on Zoom */
 
+.newstract-preview {
+  cursor: pointer;
+}
+
 .newstract_zoomed {
   float:none;
   z-index: 10;
