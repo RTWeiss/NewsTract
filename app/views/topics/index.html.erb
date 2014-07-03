@@ -1,6 +1,6 @@
 <div class="row", id="topics-row">
     <% arr = [] %>
-    <% current_user.subscriptions.each do |subscription| %>
+    <% @subscriptions.each do |subscription| %>
       <% arr.push(subscription.topic_id) %>
       <div class="row">
         <div class="col-md-1 col-md-offset-5">

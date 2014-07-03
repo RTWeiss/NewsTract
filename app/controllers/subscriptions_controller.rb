@@ -3,7 +3,7 @@ class SubscriptionsController < ApplicationController
   before_action :authenticate_user!
   
   def index
-    @subscriptions = current_user.subscriptions
+    @subscriptions = current_user.subscriptions.includes(:topic)
   end
 
   def create
